@@ -1,11 +1,10 @@
-n, k = map(int, input().split())
-count = 0
+n, m = map(int, input().split())
 
-while(n != 1):
-    if(n % k == 0):
-        n /= k
-    else:
-        n -= 1
-    count += 1
+result = 0
 
-print(count)
+for i in range(n):
+    data = list(map(int, input().split()))
+    min_value = min(data)
+    result = max(result, min_value)
+
+print(result)
